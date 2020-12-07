@@ -1,6 +1,8 @@
 <template>
+<div v-bind:class="{favorited:favorited}">
 <button class="toggle-srce" @click="toggle">
 <Srce class="toggle-srce__icon" :class="iconClasses" /></button>
+</div>
 </template>
 
 <script>
@@ -34,6 +36,12 @@ export default{
     font-size: 20px;
     position: relative;
     background:none;
+    border:none;
+    fill: white;
+    cursor: pointer;
+}
+.favorited .toggle-srce{
+    fill: red;
     border:none;
 }
 .toggle-srce__icon{
